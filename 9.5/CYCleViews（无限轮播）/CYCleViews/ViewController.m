@@ -38,6 +38,7 @@
         UIImage *image = [UIImage imageWithData:data];
         [tempArray addObject:image];
     }
+    
     _cycleList = tempArray.copy;
 }
 

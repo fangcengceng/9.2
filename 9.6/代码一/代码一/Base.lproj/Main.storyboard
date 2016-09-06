@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz4-k5-GLP">
+                                <rect key="frame" x="27" y="70" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="0Jm-fG-nch"/>
+                                    <constraint firstAttribute="height" constant="30" id="Tie-w0-ZLa"/>
+                                </constraints>
+                                <state key="normal" title="下载"/>
+                                <connections>
+                                    <action selector="downloadclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jmx-y9-6Bb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHd-6s-8U4">
+                                <rect key="frame" x="280" y="70" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="C4x-3k-jYY"/>
+                                    <constraint firstAttribute="height" constant="30" id="zDJ-ko-sFI"/>
+                                </constraints>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="pauseclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HyS-93-uAL"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xqa-xt-oo0">
+                                <rect key="frame" x="27" y="42" width="299" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="GLb-DX-Zav"/>
+                                    <constraint firstAttribute="width" constant="299" id="HA0-AE-JTO"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tz4-k5-GLP" firstAttribute="top" secondItem="xqa-xt-oo0" secondAttribute="bottom" constant="26" id="9Ad-DW-fL2"/>
+                            <constraint firstItem="xqa-xt-oo0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="9or-h9-4oD"/>
+                            <constraint firstItem="xqa-xt-oo0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="27" id="Y3i-B2-aLk"/>
+                            <constraint firstItem="Tz4-k5-GLP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="27" id="awl-L9-hdy"/>
+                            <constraint firstItem="RHd-6s-8U4" firstAttribute="leading" secondItem="Tz4-k5-GLP" secondAttribute="trailing" constant="207" id="jqk-ej-bTR"/>
+                            <constraint firstItem="RHd-6s-8U4" firstAttribute="top" secondItem="xqa-xt-oo0" secondAttribute="bottom" constant="26" id="tuw-Gv-1mC"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="progressView" destination="xqa-xt-oo0" id="eF6-uC-Xmz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232.5" y="220.5"/>
+        </scene>
+    </scenes>
+</document>
