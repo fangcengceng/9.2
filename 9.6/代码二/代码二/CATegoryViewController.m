@@ -7,7 +7,6 @@
 //
 
 #import "CATegoryViewController.h"
-#import "AFNetworking.h"
 #import "catagoryModel.h"
 #import "UIImageView+WebCache.h"
 #import "WEBViewController.h"
@@ -69,6 +68,9 @@
     WEBViewController *webview = [[WEBViewController alloc] init];
     [self.navigationController pushViewController:webview animated:YES];
     webview.urlName =@"http://t10.nuomi.com/webapp/na/topten?from=fr_na_t10tab&sizeLimit=8&version=2&needstorecard=1&areaId=100010000&location=39.989430,116.324470&bn_aid=ios&bn_v=5.13.0&bn_chn=com_dot_apple";
+    webview.title = _catagoryList[indexPath.row].category_name;
+
+    
 }
 
 @end
